@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Project 2 - Front-end Mentor</title>
+</head>
+<body>
+
+  <main class="container">
+    <section class="popup" id="firstStep">
+      <div class="icon-div">
+        <img src="images/icon-star.svg"/>
+      </div>
+
+      <h1>How did we do?</h1>
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!
+      </p>
+
+      <form id="form">
+        <div class="form-container">
+          <label class="label-radio">
+            <div class="div-radio">
+              <span>1</span>
+              <input type="radio" name="r1" class="radio" value="1">
+            </div>
+          </label>
+          <label class="label-radio">
+            <div class="div-radio">
+              <span>2</span>
+              <input type="radio" name="r1" class="radio" value="2">
+            </div>
+          </label>
+          <label class="label-radio">
+            <div class="div-radio">
+              <span>3</span>
+              <input type="radio" name="r1" class="radio" value="3">
+            </div>
+          </label>
+          <label class="label-radio">
+            <div class="div-radio">
+              <span>4</span>
+              <input type="radio" name="r1" class="radio" value="4">
+            </div>
+          </label>
+          <label class="label-radio">
+            <div class="div-radio">
+              <span>5</span>
+              <input type="radio" name="r1" class="radio" value="5">
+            </div>
+          </label>
+        </div>
+        <button type="submit" id="button"> Submit</button>
+      </form>
+    </section>
+
+    <section class="popup invisible" id="thankspage">
+      <div class="containerThanks">
+        <img src="images/illustration-thank-you.svg"/>
+        <div class="styleSelected">
+          <p>You selected <span id="value"></span> out of 5</p>
+        </div>
+        <h1>Thank you!</h1>
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need more support, 
+          don't hesitate to get in touch!
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    var form = document.querySelector('#form')
+    var botao = document.querySelector('#button')
+    var text = document.querySelector('#value')
+    var step1 = document.querySelector('#firstStep')
+    var step2 = document.querySelector('#thankspage')
+
+    botao.addEventListener('click', function (e){
+      e.preventDefault();
+      text.textContent = form.r1.value
+      console.log(form.r1.value);
+      step1.classList.add("invisible")
+      step2.classList.remove("invisible")
+    })
+
+</script>
+</body>
+</html>
