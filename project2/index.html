@@ -61,7 +61,7 @@
 
     <section class="popup invisible" id="thankspage">
       <div class="containerThanks">
-        <img src="images/illustration-thank-you.svg"/>
+        <img src="images/illustration-thank-you.svg" alt="star icon illustration"/>
         <div class="styleSelected">
           <p>You selected <span id="value"></span> out of 5</p>
         </div>
@@ -81,13 +81,20 @@
     var step1 = document.querySelector('#firstStep')
     var step2 = document.querySelector('#thankspage')
 
-    botao.addEventListener('click', function (e){
-      e.preventDefault();
-      text.textContent = form.r1.value
-      console.log(form.r1.value);
-      step1.classList.add("invisible")
-      step2.classList.remove("invisible")
-    })
+
+      botao.addEventListener('click', function (e){
+        e.preventDefault();
+        if(form.r1.value !== ''){
+          text.textContent = form.r1.value
+          console.log(form.r1.value);
+          step1.classList.add("invisible")
+          step2.classList.remove("invisible")
+        }else{
+          alert('Select a note!')
+        }
+      })
+
+
 
 </script>
 </body>
