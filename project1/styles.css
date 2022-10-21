@@ -62,7 +62,7 @@ span{
     height: 90px;
 }
 
-.price h3{
+.price h2{
     margin-right: 25px;
     color: var(--dark-cyan);
     font-size: 3rem;
