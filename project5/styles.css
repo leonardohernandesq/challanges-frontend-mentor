@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap');
+ 
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --bright-blue-hover: hsl(245, 83%, 68%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --desaturated-blue-500: hsl(224, 23%, 55%, 0.5);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    --black: hsl(0, 0%, 0%);
+    --white:hsl(0, 0%, 100%);
+
+}
+
+*{
+    margin: 0rem;
+    padding: 0rem;
+}
+
+body{
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+
+    z-index: 2;
+    position: relative;
+    font-family: 'Red Hat Display';
+    font-size: 1rem;
+    
+}
+
+.container{
+    z-index: 3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(images/pattern-background-desktop.svg);
+    background-color:  hsl(225deg, 100%, 94%);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.card{
+    max-width: 21.875rem;
+    width: 90%;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0.25rem 0.25rem 0.625rem var(--desaturated-blue-500);
+
+}
+
+.card-content{
+    padding: 1.5rem 2rem;
+    text-align: center;
+    color: var(--dark-blue);
+}
+
+.card-content h1{
+    margin-bottom: 1.4rem;
+}
+
+.image{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.pattern{
+    width:100vw;
+    background-color: var(--desaturated-blue);
+    
+    z-index: 0;
+    position: absolute;
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0;
+
+    background-color: var(--very-pale-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}
+
+.details section{
+    margin-left: -3.125rem;
+}
+
+.details p{
+    margin: 0.375rem 0rem;
+}
+
+.details img{
+    width: 2rem;
+    height: 2rem;
+}
+
+.details a{
+    transition:all 0.8s;
+
+}
+.details a:hover{
+    color: var(--bright-blue-hover);
+}
+
+button{
+    height: 2.5rem;
+    width: 100%;
+    margin: 0.375rem 0rem;
+    border-radius: 0.6rem;
+    border: 0;
+    background-color: var(--bright-blue);
+    color: var(--pale-blue);
+    cursor: pointer;
+
+    transition:all 0.8s;
+}
+
+button:hover{
+    background-color: var(--bright-blue-hover);
+}
+
+button:nth-last-child(1){
+    background-color: var(--white);
+    color: var(--desaturated-blue);
+    height: 1.875rem;
+}
+
+button:nth-last-child(1):hover{
+    color: var(--black);
+}
+
+@media(max-width:37.5rem){
+    .container{
+        background-image: url(images/pattern-background-mobile.svg);
+        background-color:  hsl(225deg, 100%, 94%);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
