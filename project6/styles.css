@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root{
+    --very-dark-bg: hsl(233, 47%, 7%);
+    --dark-desaturated-blue-card: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+    --soft-violet-image: hsl(277, 60%, 39%);
+
+    --white:  hsl(0, 0%, 100%);
+    --slightly-800: hsla(0, 0%, 100%, 0.75);
+    --slightly-600: hsla(0, 0%, 100%, 0.6);
+}
+
+*{
+    padding: 0rem;
+    margin: 0rem;
+    box-sizing: border-box;
+    color: var(--white);
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-dark-bg);
+    font-family: 'Lexend Deca';
+}
+
+.card{
+    display: flex;
+    max-width: 75rem;
+    width: 90%;
+}
+
+.card h1{
+    font-size: 2.4rem;
+    font-family: 'inter';
+}
+
+.textBlock{
+    background-color: var(--dark-desaturated-blue-card);
+    padding: 3.4rem;
+    width: 50%;
+}
+
+.textBlock span{
+    color: var(--soft-violet);
+}
+
+.textBlock p{
+    color: var(--slightly-600);
+    margin-top: 2.6rem;
+    font-family: 'inter';
+    font-size: 1rem;
+    padding-right: 5rem;
+    line-height: 1.5rem;
+}
+
+
+.imageBlock{
+    width: 50%;
+    background-color: var(--soft-violet-image);
+}
+
+.imagem{
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.numbersSection{
+    margin-top: 6rem;
+    display: flex;
+    padding-right: 3rem;
+}
+
+.numbersSection article h2{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.numbersSection article h3{
+    color: var(--slightly-600);
+    padding-right: 2rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 870px){
+    .card{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .card p{
+        padding: 0rem;
+    }
+
+    .textBlock{
+        width: 100%;
+        text-align: center;
+        padding: 1.7rem;
+    }
+    
+    .imageBlock{
+        width: 100%;
+    }
+    
+    .numbersSection{
+        display: flex;
+        flex-direction: column;
+        padding: 0rem;
+        margin-top: 2rem;
+    }
+    
+    .numbersSection article h3{
+        padding: 0;
+        margin: 0rem 0rem 1.2rem 0rem;
+    }
+}
