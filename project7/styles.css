@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+--bright-orange: hsl(31, 77%, 52%);
+--dark-cyan: hsl(184, 100%, 22%);
+--very-dark-cyan: hsl(179, 100%, 13%);
+
+--transparent-white: hsla(0, 0%, 100%, 0.75);
+/* (paragraphs) */
+
+--very-light-gray: hsl(0, 0%, 95%);
+/* (background, headings, buttons) */
+}
+
+.container{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 56.25rem;
+    width: 90%;
+}
+
+.cards{
+    padding: 3rem;
+}
+
+.cards h2{
+    font-size: 2.4rem;
+    font-family: 'Big Shoulders Display';
+    text-transform: uppercase;
+    color: var(--very-light-gray);
+}
+
+.cards p{
+    font-family: 'Lexend Deca';
+    color: var(--transparent-white);
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.02rem;
+    padding-bottom: 5rem;
+}
+
+.cards button{
+    padding: 0.9rem 1.9rem;
+    border-radius: 5rem;
+    border: 0rem;
+    font-family: 'Lexend Deca';
+    background-color: var(--very-light-gray);
+    font-size: 0.9rem;
+}
+
+.sedans {
+    background-color: var(--bright-orange);
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.sedans button{
+    color: var(--bright-orange);
+}
+
+.suvs{
+    background-color: var(--dark-cyan);
+}
+
+.suvs button{
+    color: var(--dark-cyan);
+}
+
+.luxury{
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.luxury button{
+    color: var(--very-dark-cyan);
+}
+
+
+
+
+
